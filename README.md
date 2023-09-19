@@ -29,6 +29,7 @@ sh elec_master.sh SubjectID
 to utilize parallel computing resources:
 sbatch elec_master.sh SubjectID
 
+# Example Output
 
 [Example.pdf](https://github.com/bragalab/electrode_visulization/files/12666715/Example.pdf)
 
