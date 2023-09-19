@@ -6,8 +6,6 @@ elec_master.sh utilizes elec_distance.m, elec_combiner...R and elec_plotter.m to
 
 geodesic_distance.py can calculate geodesic distances between contacts.
 
-stim_distance.m calculates distance from each electrode to the stimulation site for stim data.
-
 # Requirements
 
 You will need to have FreeSurfer, iELVIs, matlab/r2020b or later and R/4.0.3 installed.
