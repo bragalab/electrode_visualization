@@ -7,7 +7,8 @@ function elec_plotter(SubjectID)
 %% load paths
 addpath(genpath('/projects/b1134/tools/iELVis'))
 PNGPATH = sprintf('/projects/b1134/processed/fs/%s/%s/elec_recon/PICS', SubjectID, SubjectID);
-FSPATH = sprintf('/projects/b1134/processed/fs/%s/%s/elec_recon/', SubjectID, SubjectID);
+FSPATH = sprintf('/projects/b1134/processed/fs/%s/%s/elec_recon', SubjectID, SubjectID);
+
 %% load channel info from mgrid file
 
 [~, elecLabels, elecRgb, elecPairs, elecPresent]=mgrid2matlab(SubjectID);
@@ -42,20 +43,16 @@ edges(end+1) = length(elecLabels)+1;
 %% create info table
 
 t1 = table(electrode_shafts, Type, Dimensions);    
-cd(FSPATH)
-writetable(t1,'electrodeinfotable.csv')
-    
-%% Make required iELVIS coordinate files, and correct for brainshift
-
-%dykstraElecPjct(SubjectID)
-%yangWangElecPjct(SubjectID)
+writetable(t1,[FSPATH,'/electrodeinfotable.csv'])
 
  %% plot
  
-%figure out hemispheres
-    cd(PNGPATH)
+if ~exist(PNGPATH, 'dir')
+   mkdir(PNGPATH)
+end
+cd(PNGPATH)
 
-    %create images for individual electrode shafts
+%create images for individual electrode shafts
 for i = 1:length(electrode_shafts)
 
     cfg=[];
@@ -69,6 +66,7 @@ for i = 1:length(electrode_shafts)
     cfg.elecColors = 'r';
     cfg.title= ' ';
     cfg.showLabels = 'y';
+    cfg.elecCoord = 'LEPTO';
     plotPialSurf(SubjectID,cfg);
     ax = gca;
     ax.Units = 'inches';
