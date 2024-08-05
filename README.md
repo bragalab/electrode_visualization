@@ -26,7 +26,7 @@ A2 173 171 171
 to run locally:
 sh elec_master.sh SubjectID
 
-to utilize parallel computing resources:
+To run via SLURM workload manager:
 sbatch elec_master.sh SubjectID
 
 # Example Output
