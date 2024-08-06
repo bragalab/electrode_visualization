@@ -3,7 +3,7 @@
 
 # Code by Chris Cyr - December 2023
 
-# Usage: sh /projects/b1134/tools/electrode_visualization/elec_zoomer.sh ATHUAT
+# Usage: sh /projects/b1134/tools/electrode_visualization/elec_zoomer.sh SUBJECTID
 
 module purge
 module load fsl
