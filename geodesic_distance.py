@@ -7,7 +7,6 @@
 # Output is a csv with distance from stim site to all other bipolar electrodes.
 # Needs to be run from a virtual environment will all packages below installed
 # 
-# Usage: python /projects/b1134/tools/electrode_visualization/geodesic_distance.py /projects/b1134/processed/ieeg_stim/ATHUAT/EMU0018/STIM01/W7-W8 l
 #
 ###############################################
 #import packages
