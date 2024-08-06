@@ -11,7 +11,7 @@
 #Description: Master script for creating electrode visualiztion pdf for BNI participants
 #electrodes must be localized in Bioimages suite ahead of time, and several scripts must be run afterwards in order to create the file brainmask_coords_0_wlabels, as well as individual 3mm volumetric sphere files.
 #
-#Usage: sbatch /projects/b1134/tools/electrode_visualization/elec_master.sh ATHUAT
+#Usage: sbatch /projects/b1134/tools/electrode_visualization/elec_master.sh SUBJECTID
 
 SubjectID=$1
 ## cut out small CT, T1, and BOLD images and overlay electrode spheres
