@@ -2,7 +2,7 @@
 #For arranging png files created by elec_zoomer.sh onto a
 #multi page pdf document. To be used within the elec_master.sh script
 #
-#Usage: Rscript elec_combiner_210903.R ATHUAT
+#Usage: Rscript elec_combiner_210903.R SUBJECTID
 # Must be run on R/4.0.3
 # Made by Chris Cyr, Braga Lab, September 2021, updated December 2023
 ################################################################
